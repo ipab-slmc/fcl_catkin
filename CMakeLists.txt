@@ -4,7 +4,7 @@ project(fcl_catkin)
 find_package(catkin REQUIRED)
 include(ExternalProject)
 
-set(HOST_OPTIMIZATION ON)
+set(HOST_OPTIMIZATION OFF)
 
 file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME}/fcl/)
 ExternalProject_Add(fcl_src
@@ -22,7 +22,7 @@ ExternalProject_Add_Step(fcl_src CopyToDevel
 
 file(MAKE_DIRECTORY include/${PROJECT_NAME})
 catkin_package(
-  INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME} include/${PROJECT_NAME} ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME}
+  INCLUDE_DIRS include/${PROJECT_NAME}
   LIBRARIES libfcl.so.0.6
 )
 
