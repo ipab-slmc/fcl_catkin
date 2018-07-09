@@ -6,7 +6,6 @@ include(ExternalProject)
 
 set(HOST_OPTIMIZATION OFF)
 
-file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME}/fcl/)
 ExternalProject_Add(fcl_src
   URL https://github.com/wxmerkt/fcl/archive/0.5.93.zip
   URL_MD5 6662e6879c3a8e6941381985645ffe60
